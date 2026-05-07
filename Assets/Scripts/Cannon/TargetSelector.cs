@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class TargetSelector : MonoBehaviour
 {
-    [Header("Маркеры")]
+    [Header("ГЊГ Г°ГЄГҐГ°Г»")]
     public GameObject hoverMarkerPrefab;
     public GameObject confirmedMarkerPrefab;
 
-    [Header("Слой земли/крепости")]
+    [Header("Г‘Г«Г®Г© Г§ГҐГ¬Г«ГЁ/ГЄГ°ГҐГЇГ®Г±ГІГЁ")]
     public LayerMask aimMask = ~0;
 
-    // ?? Делаем доступными снаружи
+    // dfdsasapdsdaasd
     public Vector3? confirmedTarget { get; private set; }
     public bool hasTarget => confirmedTarget.HasValue;
 
@@ -50,6 +50,13 @@ public class TargetSelector : MonoBehaviour
             hoverMarker.SetActive(false);
         }
     }
+
+
+
+
+
+
+
 
     void ConfirmTarget(Vector3 point)
     {
