@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        // ?? управление мышью
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -30,7 +30,7 @@ public class CameraFollow : MonoBehaviour
         pitch -= mouseY;
         pitch = Mathf.Clamp(pitch, 5f, 60f);
 
-        // ?? позиция камеры
+        
         Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
         Vector3 offset = rotation * new Vector3(0, 0, -distance);
 
@@ -38,7 +38,7 @@ public class CameraFollow : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * smooth);
 
-        // ?? смотрим на цель
+        
         transform.LookAt(target.position + Vector3.up * 1.5f);
     }
 }
